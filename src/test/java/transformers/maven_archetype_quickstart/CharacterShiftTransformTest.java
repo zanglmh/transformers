@@ -6,19 +6,18 @@ import org.junit.jupiter.api.Test;
 
 class CharacterShiftTransformTest {
 
-    private Transform transform;
-
+    private CharacterShiftTransform transform = new CharacterShiftTransform();
 
     @Test
-    public void testForwardTransformWithWrapAndNonAlpha() throws TranformationException {
+    public void testForward() throws TranformationException {
         String input = "!abc xyz??";
-        assertEquals("!bcd yza??", transform.forwardTransform(input));
+        assertEquals("!bcd yza??", transform.forwardString(input));
     }
 
     @Test
-    public void testReverseTransformWithWrap() throws TranformationException {
+    public void testReverse() throws TranformationException {
         String input = "abcxyz";
-        assertEquals("zabwxy", transform.reverseTransform(input));
+        assertEquals("zabwxy", transform.reverseTranform(input));
     }
 
 
