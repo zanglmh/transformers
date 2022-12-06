@@ -4,7 +4,7 @@ public class CharacterShiftTransform implements Transform{
 
     @Override
     public String forwardString(String input) throws TranformationException {
-//        String shifted = "";
+        String shifted = "";
 
         for(char c : input.toCharArray()){
             if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
@@ -24,7 +24,7 @@ public class CharacterShiftTransform implements Transform{
 
     @Override
     public String reverseTranform(String input) throws TranformationException {
-//        String shifted = "";
+        String shifted = "";
 
         for(char c : input.toCharArray()){
             if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
