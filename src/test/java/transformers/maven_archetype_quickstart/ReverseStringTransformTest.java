@@ -18,12 +18,18 @@ class ReverseStringTransformTest {
     public void forwardStringTest() throws TranformationException{
         String input = "123ABCDEFuvwxyz!!!";
         assertEquals("!!!zyxwvuFEDCBA321", transform.forwardString(input));
+        
+        input="helloworld";
+        assertEquals("dlrowolleh", transform.forwardString(input));
     }
     
     @Test
     public void reverseStringTest() throws TranformationException{
         String input = "!!!zyxwvuFEDCBA321";
         assertEquals("123ABCDEFuvwxyz!!!", transform.reverseTranform(input));
+        
+        input="Software Studio";
+        assertEquals("oidutS erawtfoS", transform.forwardString(input));
     }
 
 }
